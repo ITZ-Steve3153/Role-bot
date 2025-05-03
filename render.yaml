@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: discord-rolebot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: CLIENT_ID
+        sync: false
+      - key: GUILD_ID
+        sync: false
